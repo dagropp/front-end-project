@@ -69,7 +69,6 @@
     .sliders {
         width: 100%;
         box-sizing: border-box;
-        border: 2px solid blue
     }
     .slider-repeat:nth-child(1n+4) {width: 25%}
 }
