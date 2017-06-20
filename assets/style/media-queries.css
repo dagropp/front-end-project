@@ -48,7 +48,7 @@
     nav ul {
         background-color: rgba(215,157,51,1);
         flex-flow: wrap;
-        margin: 8px 0 0;
+        margin: 7px 0 0;
         box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
     }
     nav ul li {background-color: rgba(0,0,0,0.3)}

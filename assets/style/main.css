@@ -143,6 +143,7 @@ nav h2 {
     display: flex;
 	background-color: rgba(215,157,51,1);
     transition: 0.5s;
+    
 }
 #search-bar input,button {
 /*	margin: 10px;*/
@@ -151,6 +152,8 @@ nav h2 {
 }
 #search-bar input {
 	flex: 25;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 #search-bar input:focus {
     box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
