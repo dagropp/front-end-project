@@ -1,0 +1,55 @@
+/*header minimized-menu transitions*/
+.minimized-menu {
+    top: -85px;
+    height: 170px;
+    transition: 0.5s;
+}
+.minimized-menu #search-bar {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.minimized-menu div h1 {
+	opacity: 1;
+    transition: 0.5s;
+}
+/*header scroll-down transitions (same as above, only functions when scrolled down)*/
+.minimized-menu-scroll {
+    top: -85px;
+    height: 170px;
+    transition: 0.5s;
+}
+.minimized-menu-scroll #search-bar {
+    position: absolute;
+    top: -9999px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.minimized-menu-scroll div h1 {
+	opacity: 1;
+    transition: 0.5s;
+}
+/*footer mimize-maximize transitions*/
+.footer-minimize {
+    bottom: 0;
+    transition: 0.5s;
+}
+.footer-minimize h2 {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+/*search-bar minimize for tablet*/
+.search-minimize ul, .search-minimize #search-bar {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+}
+.search-minimize {
+	height: 185px;
+}
+.search-minimize h2 {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}

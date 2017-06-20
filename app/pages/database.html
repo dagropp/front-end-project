@@ -1,0 +1,31 @@
+<h1 class="minimized-header">השוואת נתונים</h1>
+<section class="database-container">
+    <table>
+        <tr>
+            <td ng-click="sortByField('commonName')">שם עממי</td>
+            <td ng-click="sortByField('classification')">סיווג</td>
+            <td ng-click="sortByField('hebrewName')">שם עברי</td>
+            <td ng-click="sortByField('englishName')">שם לועזי</td>
+            <td ng-click="sortByField('scientificName')">שם מדעי</td>
+            <td ng-click="sortByField('origin')">מוצא</td>
+            <td ng-click="sortByField('density')">צפיפות</td>
+            <td ng-click="sortByField('hardness')">קושי</td>
+            <td ng-click="sortByField('price')">מחיר לקוב</td>
+            <td ng-click="sortByField('endangerLevel')">מצב שימור</td>
+        </tr>
+        <tr ng-repeat="i in datalist" 
+            ng-click="goWoodDescription(i.id)"
+            class="data-rows">
+            <td><span class="bold">{{i.commonName}}</span></td>
+            <td>{{i.classification}}</td>
+            <td>{{i.hebrewName}}</td>
+            <td>{{i.englishName}}</td>
+            <td>{{i.scientificName}}</td>
+            <td>{{i.origin}}</td>
+            <td class="ltr">{{i.density}} kg/m³</td>
+            <td class="ltr">{{i.hardness}} N</td>
+            <td>{{i.price}} ש"ח</td>
+            <td>{{endangerValues[i.endangerLevel]}}</td>
+        </tr>
+    </table>
+</section>

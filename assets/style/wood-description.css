@@ -1,0 +1,52 @@
+.description {
+	margin: 10px auto 100px;
+	display: flex;
+    background-color: rgba(215,157,51,1);
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+    height: 400px;
+}
+.description ul div {
+    background-color: rgba(256,256,256,0.1);
+    width: 100%;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: right;
+}
+.description ul div:nth-child(odd){
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    width: 30%;
+    margin-left: 10px;
+}
+.description ul {
+	list-style: none;
+	flex: 2;
+    z-index: 100;
+    overflow: auto;
+    direction: ltr;
+}
+
+.description ul li {
+    display: flex;
+    margin: 0 10px 10px 0;
+}
+.description ul li:last-child {
+    margin-bottom: 0;
+}
+
+.image-box {
+	flex: 1;
+    direction: ltr;
+}
+.image-box img {
+	height: 100%;
+    display: block;
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
+}
+/*scroll bar style*/
+.description ::-webkit-scrollbar {width: 1%}
+.description ::-webkit-scrollbar-track {background-color: rgba(256,256,256,0.1)}
+.description ::-webkit-scrollbar-thumb {background-color: rgba(0,0,0,0.3)}

@@ -1,0 +1,14 @@
+<h1 class="maxed-header">תוצאות חיפוש</h1>
+<section class="results-container">
+    <div class="results animate-repeat" 
+        ng-repeat="i in datalist | filter:main.outcome as results" 
+        ng-click="goWoodDescription(i.id)"
+        ng-if="main.outcome"
+        ng-animate="'animate'">
+        <div><h2>{{i.commonName}}</h2></div>
+        <div><p>{{i.hebrewName}} / {{i.englishName}} / {{i.scientificName}}</p></div>
+        <div><img ng-src="assets/images/wood-grain/{{i.img}}"></div>
+    </div>
+    <h2 ng-if="results.length === 0">אין תוצאות ל-"{{main.outcome}}"</h2>
+    <h2 ng-if="!main.outcome">נא להקליד מלל בשורת החיפוש...</h2>
+</section>

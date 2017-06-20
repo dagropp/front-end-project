@@ -1,0 +1,56 @@
+<h1 class="maxed-header">דף הבית</h1>
+<section class="home-container">
+    <article>
+        <div>
+            <h2>אודותינו</h2>
+            <p>מאגר העצים 
+                <span class="bold">עֵץ מָּלֵא</span>
+                נועד לשמש נגרים, סטודנטים וחובבי עץ באשר הם במציאת מידע עדכני ומהימן אודות העצים המוצעים למכירה במחסני העצים ברחבי הארץ. החל מהשוואה בין שמות עממיים לשמות המקוריים של העצים, דרך השוואה בין צפיפויות, חוזקים וכד', וכלה במחיר משוער לפי קוב.</p>
+            <p>במאגר מוצגים רק עצים הניתנים למכירה בארץ, על אף שישנם עוד עצים רבים שניתן לרכוש באתרי אינטרנט שונים ולייבאם לארץ. העלות של ייבוא כזה היא גדולה מכיוון שהמשלוח יקר וכך גם המכס, אבל כפי שתמצאו במאגר - ישנם עצים רבים שניתן לבצע בהם פרויקטים יפייפיים ולרכוש במחסני העצים בארץ.</p>
+        </div>
+        <div>
+            <p>לנוחיותכם, מצורפת רשימה של כמה ממחסני העצים המובילים בארץ:</p>
+            <ul ng-repeat="i in woodWarehouses">
+                <li><a href="{{i.link}}" target="_blank"><span class="bold">{{i.name}}</span>, {{i.address}}</a></li>
+            </ul>
+        </div>
+    </article>
+    <article class="home-picture"></article>
+    <article class="history">
+        <div>
+        <h2>חיפושים אחרונים</h2>
+            <ul>
+                <li ng-if="!searchHistory">
+                    <br>
+                    אין חיפושים אחרונים... 
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </li>
+                <li ng-repeat="i in searchHistory track by $index" ng-click="main.outcome=i">
+                    <a href="#!/search-results/{{i}}">
+                        חיפוש עבור "{{i}}" 
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div>
+        <h2>ערכים אחרונים</h2>
+            <ul>
+                <li ng-if="!pageHistory">
+                    <br>
+                    אין דפדופים אחרונים...
+                    <i class="fa fa-tree" aria-hidden="true"></i>
+                </li>
+                <li ng-repeat="i in pageHistory track by $index">
+                    <a href="#!/wood-description/{{i[1]}}"
+                       ng-click="main.minimizeMenu()">
+                        {{i[0]}}
+                        <i class="fa fa-tree" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
+    <article class="home-picture"></article>
+</section>
+

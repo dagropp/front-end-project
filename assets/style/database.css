@@ -1,0 +1,28 @@
+.database-container {
+    background-color: rgba(215,157,51,1);
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
+	margin: 10px auto 110px;
+}
+table {
+	width: 100%;
+    border-collapse: collapse;
+    user-select: none;
+}
+table tr td {
+	border: 5px solid rgba(215,157,51,1);
+    font-size: 1.5em;
+    padding: 5px;
+    cursor: pointer;
+}
+tr:first-child td {
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    font-weight: bold;
+}
+tr:first-child td:hover,tr:first-child td:active,.data-rows:hover,.data-rows:active {
+    background-color: rgba(255,127,80,0.3);
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
+}
+.data-rows {
+    background-color: rgba(256,256,256,0.1);
+}

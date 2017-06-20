@@ -1,0 +1,104 @@
+.slider-container {
+    background-color: rgba(215,157,51,1);
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
+	margin: 10px auto 110px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 20px;
+}
+.slider-repeat {
+    width: 100%;
+}
+.sliders {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+}
+.sliders h2 {
+    width: 100%;
+}
+.range-slider {
+    width: 80%;
+    height: 25px;
+    overflow: hidden;
+}
+.slider-values {
+    width: 12%;
+    font-size: 1.5em;
+    line-height: 25px;
+    direction: ltr;
+}
+.slider-values:nth-child(1) {
+    text-align: right;
+}
+.slider-repeat:nth-child(1n+4) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 15%;
+    padding: 15px 15px 40px;
+    box-sizing: border-box;
+}
+.slider-repeat:nth-child(1n+4) h2 {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.slider-repeat:nth-child(1n+4) .sliders {
+    display: flex;
+    flex-flow: row wrap;
+    height: 200px;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    
+}
+.slider-repeat:nth-child(3) .slider-values {
+	direction: rtl;
+}
+.slider-repeat:nth-child(3) .slider-values:last-child {
+	text-align: left;
+}
+
+.slider-repeat:nth-child(1n+4) .range-slider {
+    width: 25px;
+    overflow: visible;
+}
+.slider-repeat:nth-child(1n+4) .slider-values {
+	width: 100%;
+    text-align: center;
+    margin: 10px;
+}
+.slider-container .checkbox {
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.slider-container .checkbox span {
+    padding: 10px;
+}
+.slider-container input[type="checkbox"] {
+    background-color: rgba(219,167,72,1);
+    margin: 10px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+.slider-container button {
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    color: #fff;
+}
+.slider-container button:hover,.slider-container button:active {
+    background-color: rgba(255,127,80,0.3);
+    box-shadow: 10px 10px 66px 0px rgba(0,0,0,0.75);
+}

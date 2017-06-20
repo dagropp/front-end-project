@@ -1,0 +1,67 @@
+<h1 class="minimized-header">{{currentWood.commonName}}</h1>
+<section class="description">
+	<ul>
+        <li>
+            <div>סיווג</div>
+            <div>{{currentWood.classification}}</div>
+        </li>
+        <li>
+            <div>שם עממי</div>
+            <div>{{currentWood.commonName}}</div>
+        </li>
+        <li>
+            <div>שם עברי</div>
+            <div>{{currentWood.hebrewName}}</div>
+        </li>
+        <li>
+            <div>שם לועזי</div>
+            <div>{{currentWood.englishName}}</div>
+        </li>
+        <li>
+            <div>שם מדעי</div>
+            <div>{{currentWood.scientificName}}</div>
+        </li>
+        <li>
+            <div>מוצא</div>
+            <div>{{currentWood.origin}}</div>
+        </li>
+        <li>
+            <div>דרגת צפיפות</div>
+            <div class="ltr">{{currentWood.density}} kg/m³</div>
+        </li>
+        <li>
+            <div>דרגת קושי</div>
+            <div class="ltr">{{currentWood.hardness}} N</div>
+        </li>
+        <li>
+            <div>מצב שימור</div>
+            <div>{{endangerValues[currentWood.endangerLevel]}}</div>
+        </li>
+        <li>
+            <div>קושי בעבודה</div>
+            <div>{{workabilityValues[currentWood.workability]}}</div>
+        </li>
+        <li>
+            <div>איכות הגימור</div>
+            <div>{{qualityValues[currentWood.finish]}}</div>
+        </li>
+        <li>
+            <div>איכות ההדבקה</div>
+            <div>{{qualityValues[currentWood.glue]}}</div>
+        </li>
+        <li>
+            <div>ניתן לכיפוף באדים</div>
+            <div ng-if="currentWood.steamBending">כן</div>
+            <div ng-if="!currentWood.steamBending">לא</div>
+        </li>
+        <li>
+            <div>מחיר לקוב</div>
+            <div>{{currentWood.price}} ש"ח</div>
+        </li>
+        <li ng-if="currentWood.comments">
+            <div>הערות</div>
+            <div>{{currentWood.comments}}</div>
+        </li>
+    </ul>
+	<div class="image-box"><img ng-src="../../assets/images/wood-grain/{{currentWood.img}}"></div>
+</section>
