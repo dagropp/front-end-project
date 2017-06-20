@@ -20,7 +20,7 @@
         main.goHome = function() {
             $location.path("/home");
             main.outcome = "";
-            main.searchFocus();
+            searchFocus();
             removeHeader();
             maximizeMenu();
         }
@@ -61,7 +61,7 @@
         }
         //copy e-mail address
         main.clipBoard = function() {
-            document.getElementById("copyMail").select();
+            document.querySelector("#copyMail").select();
             document.execCommand("copy");
         };
     }
