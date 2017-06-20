@@ -25,9 +25,11 @@
             error => {console.error("error obtaining data")}
         );
         //scroll event
-        $window.onscroll = function() {
-            if (document.body.scrollTop > 70) document.querySelector("header").classList.add("minimized-menu-scroll");
-            else document.querySelector("header").classList.remove("minimized-menu-scroll");
+        if ($window.matchMedia("(min-width: 1100px)").matches) {
+            $window.onscroll = function() {
+                if (document.body.scrollTop > 70) document.querySelector("header").classList.add("minimized-menu-scroll");
+                else document.querySelector("header").classList.remove("minimized-menu-scroll");
+            }
         }
         //get the history
         $scope.searchHistory = JSON.parse(localStorage.getItem("last-search"));
@@ -37,5 +39,6 @@
             if (error) console.error("error obtaining data");
             else $scope.woodWarehouses = response.data;
         });
+        
     }
 })()

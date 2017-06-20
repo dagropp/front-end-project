@@ -11,9 +11,11 @@
         //handling the requested search
         $scope.outcome = $routeParams.search
         //scroll event
-        $window.onscroll = function() {
-            if (document.body.scrollTop > 70) document.querySelector("header").classList.add("minimized-menu-scroll");
-            else document.querySelector("header").classList.remove("minimized-menu-scroll");
+        if ($window.matchMedia("(min-width: 1100px)").matches) {
+            $window.onscroll = function() {
+                if (document.body.scrollTop > 70) document.querySelector("header").classList.add("minimized-menu-scroll");
+                else document.querySelector("header").classList.remove("minimized-menu-scroll");
+            }
         }
         //route function: go to selected wood description & send it to page history
         $scope.goWoodDescription = function(selection) {
